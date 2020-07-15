@@ -1,0 +1,27 @@
+ckeditor5:
+  remote: https://github.com/ckeditor/ckeditor5
+  version: "12.2.0"
+  license:
+    name: GNU-GPL-2.0-or-later
+    url: https://github.com/ckeditor/ckeditor5/blob/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    /ckeditor5-build-classic/build/ckeditor.js: {}
+    /ckeditor5-build-classic/inspector.js: {}
+
+drupal.ckeditor5:
+  version: VERSION
+  js:
+    js/ckeditor5.es6.js: {}
+  dependencies:
+    - core/drupal
+    - ckeditor5/ckeditor5
+    - editor/drupal.editor
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.dialog
+    - core/drupal.debounce
+    - core/drupal.displace
+  # Ensure to run after core/matchmedia.
+    - core/matchmedia

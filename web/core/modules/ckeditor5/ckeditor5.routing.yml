@@ -1,0 +1,7 @@
+ckeditor5.get_path:
+    path: '/ckeditor5/media/preview/{uuid}'
+    defaults:
+        _controller: '\Drupal\ckeditor5\Controller\MediaController::preview'
+        _title: 'Hello World'
+    requirements:
+        _permission: 'access content'

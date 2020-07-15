@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="editor1" class="js-text-full text-full form-textarea resize-vertical" data-media-embed-host-entity-langcode="en" data-drupal-selector="edit-body-0-value" data-editor-value-is-changed="false" data-editor-value-original="<p><strong>hhhhhhhhh</strong></p>
+
+<drupal-media data-align=&quot;center&quot; data-entity-type=&quot;media&quot; data-entity-uuid=&quot;010f1808-3d07-4d24-8a9e-2cbe564a6a7b&quot;></drupal-media>
+
+<blockquote>
+<p>mmmmmmmm</p>
+</blockquote>
+
+<p>&amp;nbsp;</p>
+" id="edit-body-0-value" name="body[0][value]" rows="9" cols="60" placeholder="" data-editor-active-text-format="basic_html" style="margin-top: 0px; margin-bottom: 0px; height: 193px;">&lt;p&gt;&lt;strong&gt;hhhhhhhhh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;drupal-media data-align="center" data-entity-type="media" data-entity-uuid="010f1808-3d07-4d24-8a9e-2cbe564a6a7b"&gt;&lt;/drupal-media&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;mmmmmmmm&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</textarea>
+
+<script type="text/javascript" src="/ckeditor5-build-classic/build/ckeditor.js"></script>
+<script type="text/javascript" src="/ckeditor5-build-classic/node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
+<script type="text/javascript">
+	ClassicEditor
+		.create(document.getElementById('editor1'), {
+			language: 'en'
+		})
+		.then( editor => {
+			CKEditorInspector.attach( editor );
+
+		})
+		.catch(error => {
+			console.error(error);
+			return false;
+		});
+
+</script>
+</body>
+</html>

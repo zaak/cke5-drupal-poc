@@ -1,0 +1,336 @@
+{
+	"#wrapper_attributes": {
+		"aria-label": "7.jpg",
+		"tabindex": "-1",
+		"data-media-library-added-delta": 0
+	},
+	"preview": {
+		"#type": "container",
+		"#weight": 10,
+		"thumbnail": {
+			"#theme": "image_style",
+			"#style_name": "media_library",
+			"#uri": "public:\/\/2020-02\/7_5.jpg"
+		}
+	},
+	"fields": {
+		"#type": "container",
+		"#weight": 20,
+		"#parents": [
+			"media",
+			0,
+			"fields"
+		],
+		"name": {
+			"#type": "item",
+			"#title": "Name",
+			"#markup": "7.jpg"
+		},
+		"field_media_image": {
+			"#type": "container",
+			"#parents": [
+				"media",
+				0,
+				"fields",
+				"field_media_image_wrapper"
+			],
+			"#attributes": {
+				"class": [
+					"field--type-image",
+					"field--name-field-media-image",
+					"field--widget-image-image"
+				]
+			},
+			"widget": {
+				"0": {
+					"#title": "Image",
+					"#description": "",
+					"#field_parents": [
+						"media",
+						0,
+						"fields"
+					],
+					"#required": true,
+					"#delta": 0,
+					"#weight": 0,
+					"#type": "managed_file",
+					"#upload_location": "public:\/\/2020-02",
+					"#upload_validators": {
+						"file_validate_size": [
+							2097152
+						],
+						"file_validate_extensions": [
+							"png gif jpg jpeg"
+						],
+						"file_validate_is_image": []
+					},
+					"#value_callback": [
+						"Drupal\\image\\Plugin\\Field\\FieldWidget\\ImageWidget",
+						"value"
+					],
+					"#process": [
+						[
+							"Drupal\\file\\Element\\ManagedFile",
+							"processManagedFile"
+						],
+						[
+							"Drupal\\image\\Plugin\\Field\\FieldWidget\\ImageWidget",
+							"process"
+						]
+					],
+					"#progress_indicator": "throbber",
+					"#extended": true,
+					"#field_name": "field_media_image",
+					"#entity_type": "media",
+					"#display_field": false,
+					"#display_default": false,
+					"#description_field": null,
+					"#cardinality": 1,
+					"#default_value": {
+						"target_id": "30",
+						"fids": [
+							"30"
+						],
+						"display": false,
+						"description": ""
+					},
+					"#accept": "image\/*",
+					"#preview_image_style": "thumbnail",
+					"#title_field": false,
+					"#title_field_required": false,
+					"#alt_field": true,
+					"#alt_field_required": true,
+					"#default_image": []
+				},
+				"#after_build": [
+					[
+						"Drupal\\image\\Plugin\\Field\\FieldWidget\\ImageWidget",
+						"afterBuild"
+					]
+				],
+				"#field_name": "field_media_image",
+				"#field_parents": [
+					"media",
+					0,
+					"fields"
+				],
+				"#parents": [
+					"media",
+					0,
+					"fields",
+					"field_media_image"
+				],
+				"#tree": true
+			},
+			"#access": true,
+			"#weight": 1,
+			"#cache": {
+				"contexts": [],
+				"tags": [
+					"config:field.field.media.image.field_media_image",
+					"config:field.storage.media.field_media_image"
+				],
+				"max-age": -1
+			}
+		},
+		"langcode": {
+			"#type": "container",
+			"#parents": [
+				"media",
+				0,
+				"fields",
+				"langcode_wrapper"
+			],
+			"#attributes": {
+				"class": [
+					"field--type-language",
+					"field--name-langcode",
+					"field--widget-language-select"
+				]
+			},
+			"widget": {
+				"0": {
+					"#title": "Language",
+					"#title_display": "before",
+					"#description": "",
+					"#field_parents": [
+						"media",
+						0,
+						"fields"
+					],
+					"#required": false,
+					"#delta": 0,
+					"#weight": 0,
+					"value": {
+						"#title": "Language",
+						"#title_display": "before",
+						"#description": "",
+						"#field_parents": [
+							"media",
+							0,
+							"fields"
+						],
+						"#required": false,
+						"#delta": 0,
+						"#weight": 0,
+						"#type": "language_select",
+						"#default_value": "en",
+						"#languages": 3
+					}
+				},
+				"#theme": "field_multiple_value_form",
+				"#field_name": "langcode",
+				"#cardinality": 1,
+				"#cardinality_multiple": false,
+				"#required": false,
+				"#title": "Language",
+				"#description": "",
+				"#max_delta": 0,
+				"#after_build": [
+					[
+						"Drupal\\Core\\Field\\Plugin\\Field\\FieldWidget\\LanguageSelectWidget",
+						"afterBuild"
+					]
+				],
+				"#field_parents": [
+					"media",
+					0,
+					"fields"
+				],
+				"#parents": [
+					"media",
+					0,
+					"fields",
+					"langcode"
+				],
+				"#tree": true
+			},
+			"#access": true,
+			"#weight": 2,
+			"#cache": {
+				"contexts": [],
+				"tags": [],
+				"max-age": -1
+			}
+		},
+		"revision_log_message": {
+			"#type": "container",
+			"#parents": [
+				"media",
+				0,
+				"fields",
+				"revision_log_message_wrapper"
+			],
+			"#attributes": {
+				"class": [
+					"field--type-string-long",
+					"field--name-revision-log-message",
+					"field--widget-string-textarea"
+				]
+			},
+			"widget": {
+				"0": {
+					"#title": "Revision log message",
+					"#title_display": "before",
+					"#description": "Briefly describe the changes you have made.",
+					"#field_parents": [
+						"media",
+						0,
+						"fields"
+					],
+					"#required": false,
+					"#delta": 0,
+					"#weight": 0,
+					"value": {
+						"#title": "Revision log message",
+						"#title_display": "before",
+						"#description": "Briefly describe the changes you have made.",
+						"#field_parents": [
+							"media",
+							0,
+							"fields"
+						],
+						"#required": false,
+						"#delta": 0,
+						"#weight": 0,
+						"#type": "textarea",
+						"#default_value": null,
+						"#rows": 4,
+						"#placeholder": "",
+						"#attributes": {
+							"class": [
+								"js-text-full",
+								"text-full"
+							]
+						}
+					}
+				},
+				"#theme": "field_multiple_value_form",
+				"#field_name": "revision_log_message",
+				"#cardinality": 1,
+				"#cardinality_multiple": false,
+				"#required": false,
+				"#title": "Revision log message",
+				"#description": "Briefly describe the changes you have made.",
+				"#max_delta": 0,
+				"#after_build": [
+					[
+						"Drupal\\Core\\Field\\Plugin\\Field\\FieldWidget\\StringTextareaWidget",
+						"afterBuild"
+					]
+				],
+				"#field_parents": [
+					"media",
+					0,
+					"fields"
+				],
+				"#parents": [
+					"media",
+					0,
+					"fields",
+					"revision_log_message"
+				],
+				"#tree": true
+			},
+			"#access": false,
+			"#weight": 25,
+			"#cache": {
+				"contexts": [],
+				"tags": [],
+				"max-age": -1
+			}
+		},
+		"#cache": {
+			"contexts": [],
+			"tags": [
+				"config:core.entity_form_display.media.image.media_library"
+			],
+			"max-age": -1
+		},
+		"#process": [
+			[
+				{},
+				"processForm"
+			]
+		],
+		"#source_field_name": "field_media_image"
+	},
+	"remove_button": {
+		"#type": "submit",
+		"#value": "Remove",
+		"#name": "media-0-remove-button",
+		"#weight": 30,
+		"#attributes": {
+			"aria-label": "Remove 7.jpg"
+		},
+		"#ajax": {
+			"callback": "::updateFormCallback",
+			"wrapper": "media-library-add-form-wrapper",
+			"message": "Removing 7.jpg."
+		},
+		"#submit": [
+			"::removeButtonSubmit"
+		],
+		"#limit_validation_errors": []
+	}
+}
